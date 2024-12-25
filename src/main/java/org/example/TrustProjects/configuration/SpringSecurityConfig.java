@@ -50,7 +50,7 @@ public class SpringSecurityConfig implements AuthenticationManager{
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.cors();
         httpSecurity.csrf().disable()
-                .authorizeRequests().antMatchers("/authenticate", "/signUp","/authenticateForGoogleLogin","/generate-otp",
+                .authorizeRequests().antMatchers("/authenticate", "/signUp","/authenticateForGoogleLogin","/generate-otp","/.well-known/*",
                         "/reset-password","/signIn","/InstitutionSignIn","/signOut","/users","/upload","/role","/Affiliation/submit","/Affiliation/list",
                         "/forAdmin","/forUser","/uploadDocument","/api/results/results","/api/results/enrollmentNumber","/api/halltickets","/api/halltickets","/api/halltickets/{rollNo}","/api/students",
                         "/swagger-ui/**","/swagger-resources/**","/v2/api-docs","/configuration/**","/webjars/**").permitAll()
