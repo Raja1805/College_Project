@@ -52,7 +52,7 @@ public class SpringSecurityConfig implements AuthenticationManager{
         httpSecurity.csrf().disable()
                 .authorizeRequests().antMatchers("/authenticate", "/signUp","/authenticateForGoogleLogin","/generate-otp","/.well-known/**",
                         "/reset-password","/signIn","/InstitutionSignIn","/signOut","/users","/upload","/role","/Affiliation/submit","/Affiliation/list",
-                        "/forAdmin","/forUser","/uploadDocument","/api/results/**","/api/results/enrollmentNumber","/api/halltickets","/api/halltickets","/api/halltickets/{rollNo}","/api/students",
+                        "/forAdmin","/forUser","/uploadDocument","/api/results/**","/api/halltickets/**","/api/students",
                         "/swagger-ui/**","/swagger-resources/**","/v2/api-docs","/configuration/**","/webjars/**").permitAll()
                 .anyRequest().authenticated()
                 .and()
